@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerController : AgentController {
 
 	private RaycastHit hit;
+	private AgentAnimationController animController;
+
+	private void Start() {
+		animController = GetComponent<AgentAnimationController>();
+	}
 
 	private void Update() {
 		if (Input.GetKey(KeyCode.W))
@@ -17,6 +22,7 @@ public class PlayerController : AgentController {
 			movement?.MoveLeft();
 		if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
 			weapon.Fire();
+			animController.Shoot();
 		}
 
 		gunTransform?.SetTarget(new Vector3(GameOvermind.instance.mouseRaycaster.planeHit.x, gunTransform.transform.position.y, GameOvermind.instance.mouseRaycaster.planeHit.z));

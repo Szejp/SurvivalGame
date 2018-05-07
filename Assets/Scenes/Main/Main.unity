@@ -194,6 +194,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114246907989181896, guid: bf74906ce88b0cc4ab004a7a7e883c14,
+        type: 2}
+      propertyPath: _mapPivotReference
+      value: 
+      objectReference: {fileID: 2080967667}
+    - target: {fileID: 114506561544597022, guid: bf74906ce88b0cc4ab004a7a7e883c14,
+        type: 2}
+      propertyPath: _gamePlane
+      value: 
+      objectReference: {fileID: 960290884}
     - target: {fileID: 114891287997103144, guid: bf74906ce88b0cc4ab004a7a7e883c14,
         type: 2}
       propertyPath: spawnPlaces.Array.data[0]
@@ -214,16 +224,6 @@ Prefab:
       propertyPath: spawnPlaces.Array.data[3]
       value: 
       objectReference: {fileID: 1752765063}
-    - target: {fileID: 114506561544597022, guid: bf74906ce88b0cc4ab004a7a7e883c14,
-        type: 2}
-      propertyPath: _gamePlane
-      value: 
-      objectReference: {fileID: 960290884}
-    - target: {fileID: 114246907989181896, guid: bf74906ce88b0cc4ab004a7a7e883c14,
-        type: 2}
-      propertyPath: _mapPivotReference
-      value: 
-      objectReference: {fileID: 2080967667}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf74906ce88b0cc4ab004a7a7e883c14, type: 2}
   m_IsPrefabParent: 0
@@ -328,11 +328,6 @@ Prefab:
       propertyPath: _mapPivotReference
       value: 
       objectReference: {fileID: 2080967667}
-    - target: {fileID: 95901031017536550, guid: acbbfe1544f09ea4b8a126abd0962620,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 0656d1c7e39104847bf382c877f27dbb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: acbbfe1544f09ea4b8a126abd0962620, type: 2}
   m_IsPrefabParent: 0

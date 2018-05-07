@@ -20,4 +20,6 @@ public class FireWeapon : Weapon {
 			_lastFiredTime = Time.realtimeSinceStartup;
 		}
 	}
+
+
 }
