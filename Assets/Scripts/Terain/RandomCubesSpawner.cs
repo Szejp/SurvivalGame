@@ -25,7 +25,8 @@ public class RandomCubesSpawner : MonoBehaviour {
 	[ContextMenu("Clear")]
 	public void Clear() {
 		foreach (var c in transform.GetComponentsInChildren<Transform>()) {
-			DestroyImmediate(c.gameObject);
+			if (c.name == cube.name + "(Clone)")
+				DestroyImmediate(c.gameObject);
 		}
 	}
 }
