@@ -1,6 +1,3 @@
 [submodule "UsefulStuff"]
 	path = UsefulStuff
 	url = https://github.com/Szejp/UsefulStuff
-[submodule "Assets/UsefulStuff"]
-	path = Assets/UsefulStuff
-	url = https://github.com/Szejp/UsefulStuff
