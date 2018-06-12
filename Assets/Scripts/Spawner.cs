@@ -22,9 +22,7 @@ public class Spawner : MonoSingleton<Spawner> {
 
 	public Component Spawn(Component component, Vector3 position) {
 		var result = Spawn(component);
-		Debug.Log(result.transform.position);
 		result.transform.position = position;
-		Debug.Log(result.transform.position);
 		return result;
 	}
 
@@ -36,7 +34,6 @@ public class Spawner : MonoSingleton<Spawner> {
 	public void Collect(Component entity) {
 		entity.gameObject.SetActive(false);
 		pool.Collect(entity);
-		Debug.Log("[Spawner] Collected:" + entity);
 	}
 
 	protected override void Awake() {

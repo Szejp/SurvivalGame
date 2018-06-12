@@ -1120,8 +1120,8 @@ SkinnedMeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 50d0a9c3ccdac504eb1c167ea285c097, type: 2}
-  - {fileID: 2100000, guid: 50d0a9c3ccdac504eb1c167ea285c097, type: 2}
+  - {fileID: 2100000, guid: e2b201cdf19fabd4788fa49e5c5481fe, type: 2}
+  - {fileID: 2100000, guid: e2b201cdf19fabd4788fa49e5c5481fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1182,10 +1182,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 5
+  m_Acceleration: 50
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 250
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
