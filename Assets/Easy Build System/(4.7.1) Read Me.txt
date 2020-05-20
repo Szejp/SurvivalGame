@@ -1,0 +1,83 @@
+Copyright © 2015-2020 by Ads Studio 12. All right reserved.
+
+Thanks you for have purchasing/updated Easy Build System.
+If you want use only the system you can remove the folder (Samples & Integrations).
+You can read the release notes to know all changes made on the current version.
+
+It is recommended to try all the samples scenes to get a complete idea of the system.
+This allows you to see all the features of the system.
+
+If you are having any problems with the asset, thanks for report it.
+Share your experiences by write a review on the Asset Store Page.
+
+- (4.7.1) Release Note :
+	
+	- Fix UnlessDestroy in the ApplyPhysics() which meant that some parts was not immediately affected by the physics.
+	- CanPlaceOnlyOnStableSupport condition work now correctly.
+	- Fix AddonDestructibleAppearance who instantiated two time the same part at the destruction.
+	- Fix missings animations(crouch, jump, fall) on demo Third Person Controller.
+	- Fix NullReferenceException when a integration was enabled or disabled.
+	- The preview rotation are now instantiate to zero (PreviewRotationAxis is ignored).
+	- Adding new feature (PreviewMovementOnlyPossible) which allow to move the preview only if nothing collides with the mesh bounds.
+
+- (4.7) Release Note :
+
+	- Update uMMORPG integration, the navmesh is now correctly updated after placement in headless mode.
+	- Update of Photon Network integrations.
+	- Add new event (OnAffectedPart) which is called when a part is affected by the physics.
+	- Fix of some physics settings for all the samples parts.
+	- Fix integration panel windows size (https://github.com/AdsCryptoz22/EasyBuildSystem/issues/5).
+	- Fix error (InvalidOperationException: Collection was modified) in the parts collection.
+	- Fix GetCurrentProgression() in the AddonTheForestLike which is now based in the AppearanceIndex.
+
+- (4.6.9) Release Note :
+
+	- Opsive TPS Integration no longer use SDS (https://docs.unity3d.com/Manual/PlatformDependentCompilation.html).
+	- Add new destruction feature (AvoidDestruction) on the Part Behaviour to avoid destruction of some parts.
+	- When a part is destroyed the busy spaces are now correctly updated.
+	
+- (4.6.8) Release Note :
+
+	- Fix Mirror integration.
+	- Add Voxeland guide integration.
+	- Fix socket detection for attachment socket type.
+	- Update uMMORPG integration for (1.186), also fix of auto save.
+	- Change inspector color for Unity 2019.3 skin or heighter.
+
+- (4.6.7) Release Note :
+
+	- Improvement of the physics on the Default Parts.
+	- Improvement collision detection and Build Surface.
+	- The layers can be now defined in the Build Manager.
+	- Improvement of some methods and remove some duplicated code parts.
+	- End of the experimental stage for the uSurvival integration.
+	
+- (4.6.6) Release Note :
+
+	- Fix the physics problem with the uSurvival integration.
+	- Improvement of CheckStability physics method.
+
+- (4.6.5) Release Note :
+
+	- Improve some example scene and release public demo.
+	- Add new models showcase scene.
+	- Update uSurvival integration for (1.71).
+	- Update uRPG integration for (1.20). 
+	- Update uMMORPG integration for (1.183).
+	- Fix int, float parsing for blueprint loader.
+	- Fix building progression and add Conditional Physics in (The Forest Like) scene.
+	- Addon (AddonDetachChildren) detach correctly all the childrens at the destruction.
+	- The part in Preview/Queue state are now are no longer calculated by conditional physics.
+	- Fix of the conditional physics in the The Forest Like scene.
+	- The sockets now correctly switch to Ignore Layer.
+	- Improvement of the physics for the default parts.
+
+----------------------
+
+Github (Wiki) : https://github.com/AdsCryptoz22/EasyBuildSystem/
+Discord : https://discord.gg/qFM6SNW
+Donate : https://www.paypal.me/AdsStudio12
+Facebook : https://www.facebook.com/AdsStudioQuebec/
+
+Asset Store Page : http://u3d.as/joB
+Unity Forum Thread : https://forum.unity3d.com/threads/ebs-modular-building-system.366086/

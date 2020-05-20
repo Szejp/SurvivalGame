@@ -1,0 +1,17 @@
+This integration allows you to use Easy Build System with Voxeland.
+
+Feature(s) :
+
+	- All features of system work with Voxeland.
+
+Quick Install :
+
+	- Import Voxeland from asset store.
+	- Open your own scene or Voxeland demo scene.
+	- Go to integration panel and enable the Voxeland by clicking on the check box and wait the end compilation.
+	- Run the Quick Start function by clicking in the menu items (Tools/Easy Build System/Utilities/Quick Start).
+	- (Optional) You can add the addon RemoveGrassVoxeland on your part to remove the grass when placement by example for foundations.
+
+The integration has been tested only on the demo scene, however if you encounter problems, do not hesitate to report them to support.
+
+Github : https://github.com/AdsCryptoz22/EasyBuildSystem/wiki
