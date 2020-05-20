@@ -117,7 +117,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  lerpFactor: 0.05
+  smoothTime: 1
+  velocityModifier: 5
+  minDistance: 2
 --- !u!114 &114613041954697294
 MonoBehaviour:
   m_ObjectHideFlags: 0
