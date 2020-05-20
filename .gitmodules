@@ -1,3 +1,6 @@
 [submodule "UsefulStuff"]
 	path = UsefulStuff
 	url = https://github.com/Szejp/UsefulStuff
+[submodule "QFramework"]
+	path = QFramework
+	url = D:\\Projects\\QFramework\\Assets\\QFramework
