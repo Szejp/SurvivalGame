@@ -1,22 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraFollow : MonoBehaviour {
+public class CameraFollow : MonoBehaviour
+{
+    [SerializeField] Transform target;
+    [SerializeField] float smoothTime = 3f;
+    [SerializeField] float minDistance = 10f;
 
-	[SerializeField]
-	private Transform target;
-	[SerializeField]
-	private float lerpFactor = .5f;
-	private Vector3 _offset;
+    Vector3 _offset;
+    Vector3 velocity;
+    float time;
 
-	private void Start() {
-		_offset = transform.position - target.transform.position;
-	}
+    void Start()
+    {
+        _offset = transform.position - target.transform.position;
+    }
 
-	private void Update() {
-		Vector3 targetPosition = target.transform.position + _offset;
-		float modifier = Vector3.Magnitude(targetPosition - transform.position);
-		transform.position = Vector3.Lerp(transform.position, targetPosition, lerpFactor * modifier);
-	}
+    void Update()
+    {
+        Vector3 targetPosition = target.transform.position + _offset;
+        float modifier = Vector3.Magnitude(targetPosition - transform.position);
+
+        if (time < smoothTime)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            time += Time.deltaTime;
+        }
+        else if (modifier > minDistance)
+            time = 0;
+    }
 }
