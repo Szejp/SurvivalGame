@@ -1,18 +1,18 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeWeapon : Weapon {
+public class MeleeWeapon : Weapon
+{
+	const string ATTACK = "attack";
 
 	public static Action<Vector3> OnMeleeWeaponHit;
 
 	[SerializeField]
 	private float damage = 50;
-	private Animation anim;
+	private Animator anim;
 
 	public override void Fire() {
-		anim.Play();
+		anim?.SetTrigger(ATTACK);
 	}
 
 	public void OnCollisionEnter(Collision collision) {
@@ -27,6 +27,6 @@ public class MeleeWeapon : Weapon {
 
 	protected override void Awake() {
 		base.Awake();
-		anim = GetComponent<Animation>();
+		anim = GetComponent<Animator>();
 	}
 }

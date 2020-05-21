@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97951805143f404cb02e64abbfd3b474, type: 3}
-  m_Name: TextureToLevelConverter
+  m_Script: {fileID: 11500000, guid: d71655e5fd2ae5842b0bef57da621c01, type: 3}
+  m_Name: ZombieConfig
   m_EditorClassIdentifier: 
-  textures:
-  - {fileID: 2800000, guid: 4a3d5441a5946df43add9f766ffa7a27, type: 3}
+  destroyTime: 0
+  destroyEffect: {fileID: 0}

@@ -19,7 +19,7 @@ public class EnemyController : AgentController {
 	}
 
 	private void Update() {
-		gunTransform.SetTarget(GameOvermind.instance.players[0].transform.position);
+		gunTransform?.SetTarget(GameOvermind.instance.players[0].transform.position);
 		((NavMeshMovement)movement).MoveToDestination(GameOvermind.instance.players[0].transform.position);
 
 		if (weapon.GetType() == typeof(FireWeapon)) {

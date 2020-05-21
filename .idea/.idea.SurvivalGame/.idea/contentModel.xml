@@ -712,6 +712,26 @@
           </e>
           <e p="GameModule" t="Include">
             <e p="GameStateController.cs" t="Include" />
+            <e p="GameTools" t="Include">
+              <e p="Effects" t="Include">
+                <e p="Effect.cs" t="Include" />
+                <e p="ParticleEffect.cs" t="Include" />
+              </e>
+              <e p="Entities" t="Include">
+                <e p="Entity.cs" t="Include" />
+                <e p="EntityConfig.cs" t="Include" />
+              </e>
+              <e p="ObjectPool" t="Include">
+                <e p="CollectArea2D.cs" t="Include" />
+                <e p="ICollector.cs" t="Include" />
+                <e p="IPoolCollectable.cs" t="Include" />
+                <e p="ObjectPool.cs" t="Include" />
+              </e>
+              <e p="Teams" t="Include">
+                <e p="Teams.cs" t="Include" />
+                <e p="TeamsConfig.cs" t="Include" />
+              </e>
+            </e>
             <e p="QContinue" t="Include">
               <e p="Continue.cs" t="Include" />
               <e p="ContinueConfig.cs" t="Include" />
@@ -719,26 +739,6 @@
               <e p="View" t="Include">
                 <e p="ContinueButton.cs" t="Include" />
               </e>
-            </e>
-          </e>
-          <e p="GameTools" t="Include">
-            <e p="Effects" t="Include">
-              <e p="Effect.cs" t="Include" />
-              <e p="ParticleEffect.cs" t="Include" />
-            </e>
-            <e p="Entities" t="Include">
-              <e p="Entity.cs" t="Include" />
-              <e p="EntityConfig.cs" t="Include" />
-            </e>
-            <e p="ObjectPool" t="Include">
-              <e p="CollectArea2D.cs" t="Include" />
-              <e p="ICollector.cs" t="Include" />
-              <e p="IPoolCollectable.cs" t="Include" />
-              <e p="ObjectPool.cs" t="Include" />
-            </e>
-            <e p="Teams" t="Include">
-              <e p="Teams.cs" t="Include" />
-              <e p="TeamsConfig.cs" t="Include" />
             </e>
           </e>
           <e p="GoogleMobileAds" t="Include">

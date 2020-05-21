@@ -1658,6 +1658,12 @@ GameObject:
   m_Component:
   - component: {fileID: 578376449398627443}
   - component: {fileID: 7389507112651452681}
+  - component: {fileID: 5097283485838772332}
+  - component: {fileID: 490412306184273353}
+  - component: {fileID: 5226285295293836893}
+  - component: {fileID: 4138760702639008512}
+  - component: {fileID: 3428478887772899632}
+  - component: {fileID: 3152185968537558220}
   m_Layer: 0
   m_Name: Zombie1
   m_TagString: Untagged
@@ -1713,6 +1719,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5097283485838772332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934b1a7dce8b0ac4088d8bc14116e73f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}
+  weapon: {fileID: 490412306184273353}
+  gunTransform: {fileID: 0}
+  agent: {fileID: 0}
+  _shootTimer: 2
+--- !u!114 &490412306184273353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6312a7999b9b5b49af285f2132a0d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  damage: 50
+--- !u!114 &5226285295293836893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b393ce5235fab14c9ec4a955861ffb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityConfig: {fileID: 0}
+  teamId: 1
+--- !u!136 &4138760702639008512
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.82, z: 0}
+--- !u!195 &3428478887772899632
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &3152185968537558220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493914613880827488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50478f7474d770749990e3496b37d5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0
+  _mapPivotReference: {fileID: 0}
+  isManual: 0
 --- !u!1 &4710940672626480558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2232947171490764342}
   - component: {fileID: 2193966762700056535}
+  - component: {fileID: 110560507135416654}
   m_Layer: 0
   m_Name: Z_L_ArmPalm
   m_TagString: Untagged
@@ -2591,6 +2694,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.3393401, y: 0.022504646, z: 0.030085474}
     m_Extent: {x: 0.13558769, y: 0.08463068, z: 0.083342224}
   m_DirtyAABB: 0
+--- !u!135 &110560507135416654
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7919196358131396253}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: -0.62524366, y: -0.040940598, z: 1.1071169}
 --- !u!1 &8103067124237306251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,6 +2717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354160536917887269}
   - component: {fileID: 8901803093505179118}
+  - component: {fileID: 5652356436315449886}
   m_Layer: 0
   m_Name: Z_R_ArmPalm
   m_TagString: Untagged
@@ -2688,6 +2805,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.3393405, y: 0.022505248, z: -0.030084394}
     m_Extent: {x: 0.13558848, y: 0.0846305, z: 0.08334193}
   m_DirtyAABB: 0
+--- !u!135 &5652356436315449886
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8103067124237306251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0.6252445, y: -0.040941224, z: 1.1071186}
 --- !u!1 &8121686736740376697
 GameObject:
   m_ObjectHideFlags: 0
