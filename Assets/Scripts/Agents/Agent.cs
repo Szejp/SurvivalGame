@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using QFramework.GameTools.Entities;
 
-public class Agent : GameEntity, IMouseTargetable {
+public class Agent : Entity, IMouseTargetable {
 
 }

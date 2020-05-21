@@ -721,6 +721,26 @@
               </e>
             </e>
           </e>
+          <e p="GameTools" t="Include">
+            <e p="Effects" t="Include">
+              <e p="Effect.cs" t="Include" />
+              <e p="ParticleEffect.cs" t="Include" />
+            </e>
+            <e p="Entities" t="Include">
+              <e p="Entity.cs" t="Include" />
+              <e p="EntityConfig.cs" t="Include" />
+            </e>
+            <e p="ObjectPool" t="Include">
+              <e p="CollectArea2D.cs" t="Include" />
+              <e p="ICollector.cs" t="Include" />
+              <e p="IPoolCollectable.cs" t="Include" />
+              <e p="ObjectPool.cs" t="Include" />
+            </e>
+            <e p="Teams" t="Include">
+              <e p="Teams.cs" t="Include" />
+              <e p="TeamsConfig.cs" t="Include" />
+            </e>
+          </e>
           <e p="GoogleMobileAds" t="Include">
             <e p="Api" t="Include">
               <e p="AdapterStatus.cs" t="Include" />
@@ -797,11 +817,14 @@
             </e>
           </e>
           <e p="Helpers" t="Include">
+            <e p="AssetsLoader.cs" t="Include" />
+            <e p="BitmapToArrayConverter.cs" t="Include" />
             <e p="Command" t="Include">
               <e p="Commands.cs" t="Include" />
               <e p="ExampleCommand.cs" t="Include" />
               <e p="ICommand.cs" t="Include" />
             </e>
+            <e p="DebugHelper.cs" t="Include" />
             <e p="Editor" t="Include">
               <e p="GUIUtils" t="Include">
                 <e p="GUIColor.cs" t="Include" />
@@ -809,6 +832,15 @@
               </e>
             </e>
             <e p="EnumerableExtension.cs" t="Include" />
+            <e p="Interfaces" t="Include">
+              <e p="IDamagable.cs" t="Include" />
+              <e p="IEntityProvider.cs" t="Include" />
+              <e p="IMouseTargetable.cs" t="Include" />
+              <e p="ITargetProvider.cs" t="Include" />
+            </e>
+            <e p="Physics" t="Include">
+              <e p="OnTrigger2D.cs" t="Include" />
+            </e>
             <e p="PlayerPrefs" t="Include">
               <e p="Data" t="Include">
                 <e p="PPBase.cs" t="Include" />
@@ -822,6 +854,12 @@
               </e>
               <e p="PlayerPrefsDaysPassedCounter.cs" t="Include" />
             </e>
+            <e p="SceneHelper.cs" t="Include" />
+            <e p="Spawning" t="Include">
+              <e p="Spawner.cs" t="Include" />
+            </e>
+            <e p="TargetingHelper.cs" t="Include" />
+            <e p="TextureToLevelConverter.cs" t="Include" />
             <e p="ToolbarExtender" t="Include">
               <e p="Editor" t="Include">
                 <e p="EditorScenesUtils.cs" t="Include" />
@@ -835,12 +873,16 @@
               <e p="ProgressBar.cs" t="Include" />
               <e p="ValueWidget" t="Include">
                 <e p="IntValueWidget.cs" t="Include" />
+                <e p="StringValueWidget.cs" t="Include" />
                 <e p="ValueWidget.cs" t="Include" />
               </e>
               <e p="Views" t="Include">
                 <e p="GameObjectView.cs" t="Include" />
                 <e p="IView.cs" t="Include" />
               </e>
+            </e>
+            <e p="VelocityRelated" t="Include">
+              <e p="VelocityMeasurer.cs" t="Include" />
             </e>
           </e>
           <e p="Modules" t="Include">
@@ -937,12 +979,16 @@
           </e>
           <e p="Shooting" t="Include">
             <e p="Scripts" t="Include">
+              <e p="AIs" t="Include">
+                <e p="SearchNearestEnemy2DTrigger.cs" t="Include" />
+              </e>
+              <e p="BasicTargetProvider.cs" t="Include" />
+              <e p="LerpAimer.cs" t="Include" />
               <e p="Projectiles" t="Include">
                 <e p="BasicProjectile.cs" t="Include" />
               </e>
               <e p="ShootingData.cs" t="Include" />
               <e p="ShootingSystem.cs" t="Include" />
-              <e p="Targeter.cs" t="Include" />
             </e>
           </e>
           <e p="Tests" t="Include">
@@ -987,9 +1033,8 @@
           </e>
           <e p="Effector.cs" t="Include" />
           <e p="GameOvermind.cs" t="Include" />
-          <e p="Interfaces" t="Include">
-            <e p="IDamagable.cs" t="Include" />
-            <e p="IMouseTargetable.cs" t="Include" />
+          <e p="LevelManagement" t="Include">
+            <e p="SpawnStrategy.cs" t="Include" />
           </e>
           <e p="MapController.cs" t="Include" />
           <e p="MonoSingleton.cs" t="Include" />
@@ -1001,7 +1046,6 @@
             <e p="Explosion.cs" t="Include" />
           </e>
           <e p="Projectile.cs" t="Include" />
-          <e p="Spawner.cs" t="Include" />
           <e p="Terain" t="Include">
             <e p="RandomCubesSpawner.cs" t="Include" />
           </e>

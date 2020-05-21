@@ -24,6 +24,10 @@ public class GameEntity : MonoBehaviour, IDamagable {
 		}
 	}
 
+	public GameObject DestroyEffect => destroyEffect;
+
+	[SerializeField]
+	private GameObject destroyEffect;
 	[SerializeField]
 	private float _health;
 	[SerializeField]

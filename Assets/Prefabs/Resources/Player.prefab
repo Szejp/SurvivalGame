@@ -448,6 +448,8 @@ GameObject:
   - component: {fileID: 114962825702448384}
   - component: {fileID: 114915213021273888}
   - component: {fileID: 1933406965406841814}
+  - component: {fileID: 6880185678301672306}
+  - component: {fileID: 7374579387931909120}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -554,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f2b2c553eb02446bcf73123b2c23a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 0}
+  movement: {fileID: 114762834373654268}
   weapon: {fileID: 0}
   gunTransform: {fileID: 114962825702448384}
   agent: {fileID: 114494865216366726}
@@ -585,10 +587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6880542eb0ed02a4987f9b5eda32b201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  destructable: 1
-  _health: 10
-  _sideId: 1
+  entityConfig: {fileID: 11400000, guid: 8c6fd18cdeaec994e96a34b0e78aab4b, type: 2}
+  teamId: 0
 --- !u!114 &114962825702448384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,10 +631,56 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 6880185678301672306}
+  - {fileID: 7374579387931909120}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6880185678301672306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471933777330546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+--- !u!114 &7374579387931909120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471933777330546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 1
+    Name: velocity
+  - Type: 1
+    SynchronizeType: 1
+    Name: angularVelocity
+  - Type: 9
+    SynchronizeType: 1
+    Name: shoot
+  - Type: 4
+    SynchronizeType: 1
+    Name: isMoving
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
 --- !u!1 &1505571354233606
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class MeleeWeapon : Weapon {
 	public void OnCollisionEnter(Collision collision) {
 		IDamagable damagable = collision.collider.GetComponent<IDamagable>() as IDamagable;
 		Debug.Log("[MeleeWeapon] melee hit" + damagable);
-		if (damagable != null && (object)damagable != owner && damagable.GetSideId() != owner.GetSideId()) {
+		if (damagable != null && (object)damagable != owner && damagable.GetSideId() != owner.TeamId) {
 			damagable.SetDamage(damage);
 		}
 

@@ -1,20 +1,37 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using QFramework.GameTools.Effects;
+using QFramework.GameTools.Entities;
 using UnityEngine;
 
-public class Effector : MonoBehaviour {
+public class Effector : MonoBehaviour
+{
+    [SerializeField] private Effect[] particles;
 
-	[SerializeField]
-	private ParticleSystem[] particles;
+    private void Awake()
+    {
+        Projectile.OnDestroyed += OnEntityDestroyedHandler;
+        MeleeWeapon.OnMeleeWeaponHit +=
+            position => StartCoroutine(GenerateEffect(particles[1], position));
+    }
 
-	private void Awake() {
-		Projectile.OnEntityDestroyed += p => StartCoroutine(GenerateParticleEffect(particles[0], p.transform.position));
-		MeleeWeapon.OnMeleeWeaponHit += position => StartCoroutine(GenerateParticleEffect(particles[1], position));
-	}
+    void OnDestroy()
+    {
+        Projectile.OnDestroyed -= OnEntityDestroyedHandler;
+    }
 
-	private IEnumerator GenerateParticleEffect(ParticleSystem effect, Vector3 position) {
-		var result = GameOvermind.instance.spawner.Spawn(effect, position);
-		yield return new WaitForSeconds(effect.main.duration);
-		GameOvermind.instance.spawner.Collect(result);
-	}
+    void OnEntityDestroyedHandler(Entity entity)
+    {
+        if (entity.DestroyEffect)
+            StartCoroutine(GenerateEffect(entity.DestroyEffect, entity.transform.position));
+    }
+
+    private IEnumerator GenerateEffect(Effect effect, Vector3 position)
+    {
+        if (effect != null)
+        {
+            var result = GameOvermind.instance.spawner.Spawn(effect, position);
+            yield return new WaitForSeconds(.9f * effect.Duration);
+            GameOvermind.instance.spawner.Collect(result);
+        }
+    }
 }

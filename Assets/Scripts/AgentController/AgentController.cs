@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
-public class AgentController : MonoBehaviour {
+public class AgentController : MonoBehaviourPun {
 
     public Movement movement;
     public Weapon weapon;

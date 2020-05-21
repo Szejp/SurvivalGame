@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Player : Agent {
-
+﻿public class Player : Agent
+{
+    protected void Awake()
+    {
+        //base.Awake();
+        GameOvermind.instance.players.Add(this);
+    }
 }

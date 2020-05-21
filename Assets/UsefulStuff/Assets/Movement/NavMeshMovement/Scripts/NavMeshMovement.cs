@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Photon.Pun;
+using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -14,6 +15,7 @@ public class NavMeshMovement : Movement
     [SerializeField] private bool isManual = false;
     private NavMeshAgent _agent;
     private Vector3 _agentDestination;
+    PhotonView photonView;
 
     public override void MoveLeft()
     {
@@ -71,17 +73,26 @@ public class NavMeshMovement : Movement
 
     private void Awake()
     {
-        _agent = GetComponent<NavMeshAgent>();
-        _mapPivotReference = GameObject.Find("Terrain").GetComponent<Transform>();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            _agent = GetComponent<NavMeshAgent>();
+            _mapPivotReference = GameObject.Find("Terrain").GetComponent<Transform>();
+            photonView = GetComponent<PhotonView>();
+        }
     }
 
     private void Update()
     {
-        _agent?.SetDestination(_agentDestination);
-        transform.position = _agent.transform.position;
-        transform.rotation = _agent.transform.rotation;
-        if (isManual)
-            _agentDestination = transform.position;
+        if (PhotonNetwork.IsMasterClient)
+        {
+            if (_agent.enabled)
+                _agent?.SetDestination(_agentDestination);
+
+            transform.position = _agent.transform.position;
+            transform.rotation = _agent.transform.rotation;
+            if (isManual)
+                _agentDestination = transform.position;
+        }
     }
 
     private void OnDrawGizmos()

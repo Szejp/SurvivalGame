@@ -11,8 +11,8 @@ public class ProjectileWeapon : FireWeapon {
 		Debug.Log("[ProjectileWeapon] fire projectile function");
 		Projectile b = (Projectile)GameOvermind.instance.spawner.Spawn(_currentWeapon.projectile);
 		b.transform.position = _gun.position + _gun.transform.forward / 2;
-		b.transform.LookAt(b.transform.position);
+		b.transform.LookAt(b.transform.position + _gun.transform.forward);
 		b.GetComponent<Rigidbody>().velocity = _gun.transform.forward * _currentWeapon.projectile.Speed;
-		b.firedFromSideId = owner.GetSideId();
+		b.firedFromSideId = owner.TeamId;
 	}
 }

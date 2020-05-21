@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71655e5fd2ae5842b0bef57da621c01, type: 3}
+  m_Name: AK47BulletConfig
+  m_EditorClassIdentifier: 
+  destroyTime: 0
+  destroyEffect: {fileID: 7209625699900430780, guid: 047551094ee80254a8628db3e0d17dea,
+    type: 3}
